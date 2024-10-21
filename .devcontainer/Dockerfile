@@ -4,13 +4,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Actualizar los paquetes e instalar herramientas esenciales y Python 3.10
 RUN apt-get update && \
-    apt-get install -y sudo vim git zip tree curl wget python3.10 python3.10-dev python3-pip && \
+    apt-get install -y sudo vim git zip tree curl wget python3.10 python3.10-dev python3-pip neofetch && \
     update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1 && \
     apt-get autoremove -y && \
     apt-get clean -y
 
 # Crear un usuario para desarrollo
-ARG USERNAME=kapumota
+ARG USERNAME=andre
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
